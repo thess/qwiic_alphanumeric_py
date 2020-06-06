@@ -5,8 +5,8 @@
 # Author: Ted Hess
 # License: Public Domain
 
-import pydevd_pycharm
-pydevd_pycharm.settrace('m4800', port=6969, stdoutToServer=True, stderrToServer=True)
+# import pydevd_pycharm
+# pydevd_pycharm.settrace('localhost', port=12345, stdoutToServer=True, stderrToServer=True)
 
 import time
 import sys
