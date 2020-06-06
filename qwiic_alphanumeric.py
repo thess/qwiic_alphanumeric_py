@@ -23,7 +23,6 @@ Sparkfun Alphanumeric 4-char I2C Displays
 =================
 """
 
-from time import sleep
 import qwiic_i2c
 
 # Lookup table of segments for Sparkfun Qwiic HT16K33
@@ -210,6 +209,9 @@ class QwiicAlphanumeric(object):
             :rtype: bool
 
         """
+        if not self.is_connected():
+            return False
+	# Turn it on, set it up, and clear display
         self._write_cmd(_HT16K33_OSCILATOR_ON)
         self.clear()
         self.blink_rate = 0
